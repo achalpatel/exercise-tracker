@@ -32,7 +32,7 @@ router.route('/:id').delete((req, res) => {
 });
 
 router.route('/update/:id').put((req, res) => {
-    Exercise.findOneAndUpdate(req.params.id).then(exercise => {
+    Exercise.findById(req.params.id).then(exercise => {
         exercise.username = req.body.username;
         exercise.description = req.body.description;
         exercise.duration = Number(req.body.duration);

@@ -25,7 +25,8 @@ export default class CreateExercise extends Component{
             .then(
                 res => {
                     this.setState({
-                        users:res.data.map(user => user.username)                        
+                        users : res.data.map(user => user.username),
+                        username : res.data[0].username                      
                     })
                 }
             );
@@ -69,7 +70,7 @@ export default class CreateExercise extends Component{
         axios.post("http://localhost:5000/exercises/add", exercise)
             .then(res => console.log(res.data));
 
-        window.location = '/';
+        // window.location = '/';
     }
     
     render(){
@@ -126,7 +127,7 @@ export default class CreateExercise extends Component{
                     <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
                     </div>
                 </form>
-                </div>
+            </div>
         );
     }
 }

@@ -1,4 +1,4 @@
 # Exercise Tracker
 
 ## About:
-Simple Exercises Add, update, and delete application built using MongoDB, ExpressJs, React, and Node.
+Simple Exercise tracker application to Add, update, and delete exercises built using MongoDB, ExpressJs, React, and Node.

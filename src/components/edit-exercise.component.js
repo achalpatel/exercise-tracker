@@ -24,7 +24,7 @@ export default class EditExercise extends Component{
                         username : res.data.username,
                         description : res.data.description,
                         duration : res.data.duration,
-                        date : Date.parse(res.data.date)
+                        date : new Date(res.data.date)
                     });
                 }
             );
@@ -60,7 +60,7 @@ export default class EditExercise extends Component{
         console.log(exercise);
         axios.put("http://localhost:5000/exercises/update/"+this.props.match.params.id, exercise)
             .then(res => console.log(res.data));        
-        // window.location = '/';
+        window.location = '/';
     }
 
     render(){
